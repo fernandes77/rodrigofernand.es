@@ -6,7 +6,7 @@ export default function Contact() {
     <>
       <Sidebar />
       <Main>
-        <h1>Coming soon...</h1>
+        <h1>Work in progress...</h1>
       </Main>
     </>
   )

@@ -6,7 +6,7 @@ export default function Blog() {
     <>
       <Sidebar />
       <Main>
-        <h1>Coming soon...</h1>
+        <h1 style={{ color: '#00BEFC' }}>Work in progress...</h1>
       </Main>
     </>
   )
