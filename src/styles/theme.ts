@@ -25,15 +25,16 @@ export default {
     }
   },
   colors: {
-    primary: '#00BEFC',
-    secondary: '#F2733F',
-    mainBg: '#1D1D1D',
+    primary: '#2EB396',
+    secondary: '#B3404A',
+    mainBg: '#282C35',
     lightBg: '#F2F2F2',
-    sidebarBg: '#121212',
+    sidebarBg: '#21252A',
     white: '#FFFFFF',
     black: '#121212',
-    grey: '#ADADAD',
-    greyActive: '#282828'
+    grey: '#ABB2BF',
+    greyActive: '#323841',
+    inputBg: '#343A45'
   },
   spacings: {
     xxsmall: '0.8rem',

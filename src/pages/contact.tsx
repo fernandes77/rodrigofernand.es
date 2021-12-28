@@ -1,13 +1,5 @@
-import Sidebar from 'components/Sidebar'
-import Main from 'components/Main'
+import Contact from 'templates/Contact'
 
-export default function Contact() {
-  return (
-    <>
-      <Sidebar />
-      <Main>
-        <h1>Work in progress...</h1>
-      </Main>
-    </>
-  )
+export default function ContactPage() {
+  return <Contact />
 }
