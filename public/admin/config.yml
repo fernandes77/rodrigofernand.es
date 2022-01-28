@@ -1,5 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: fernandes77/rodrigofernand.es
+  base_url: https://rodrigofernand.es/
   auth_endpoint: api/auth/
 
 media_folder: public/img
