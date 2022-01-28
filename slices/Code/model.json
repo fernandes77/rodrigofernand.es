@@ -1,0 +1,27 @@
+{
+  "id": "code",
+  "type": "SharedSlice",
+  "name": "Code",
+  "description": "Code",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Code",
+      "primary": {
+        "code": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Code",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "multi": "embed"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

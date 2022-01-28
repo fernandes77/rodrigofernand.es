@@ -1,13 +1,11 @@
-import Sidebar from 'components/Sidebar'
-import Main from 'components/Main'
+import Container from 'components/Container'
 import ContactForm from 'components/ContactForm'
 
 import * as S from './styles'
 
 const Contact = () => (
-  <S.Wrapper>
-    <Sidebar />
-    <Main>
+  <Container>
+    <S.Wrapper>
       <S.Contact>
         <h1>Say Hi!</h1>
         <p>
@@ -17,8 +15,8 @@ const Contact = () => (
         </p>
         <ContactForm />
       </S.Contact>
-    </Main>
-  </S.Wrapper>
+    </S.Wrapper>
+  </Container>
 )
 
 export default Contact

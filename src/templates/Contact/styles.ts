@@ -1,16 +1,15 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
-  & main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 `
 
 export const Contact = styled.div`
   ${({ theme }) => css`
-    padding-left: 8rem;
+    padding-left: 10rem;
     padding-right: 8rem;
     max-width: 96rem;
 

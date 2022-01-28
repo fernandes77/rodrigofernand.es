@@ -14,6 +14,7 @@ export const Wrapper = styled.textarea`
     font-family: ${theme.font.family};
 
     &::placeholder {
+      color: ${theme.colors.greyDark};
       font-size: ${theme.font.sizes.medium};
     }
 

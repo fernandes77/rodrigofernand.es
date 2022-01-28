@@ -26,13 +26,15 @@ export default {
   },
   colors: {
     primary: '#2EB396',
-    secondary: '#B3404A',
+    secondary: '#25A7E5',
     mainBg: '#282C35',
     lightBg: '#F2F2F2',
     sidebarBg: '#21252A',
+    highlight: '#515967',
     white: '#FFFFFF',
     black: '#121212',
-    grey: '#ABB2BF',
+    grey: '#ABB2BE',
+    greyDark: '#7F848E',
     greyActive: '#323841',
     inputBg: '#343A45'
   },

@@ -73,6 +73,20 @@ ${({ theme, removeBg }) => css`
       background-color: ${theme.colors.mainBg};
     `}
   }
+
+  a {
+    color: ${theme.colors.secondary};
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.85;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
 `}
 `
 export default GlobalStyles

@@ -15,5 +15,9 @@ export const Wrapper = styled.input`
       outline: 0;
       border-bottom: 3px solid ${theme.colors.primary};
     }
+
+    &::placeholder {
+      color: ${theme.colors.greyDark};
+    }
   `}
 `

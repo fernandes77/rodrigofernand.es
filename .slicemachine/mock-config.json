@@ -1,0 +1,16 @@
+{
+  "slices": {
+    "Code": {
+      "default-slice": {
+        "primary": {
+          "code": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

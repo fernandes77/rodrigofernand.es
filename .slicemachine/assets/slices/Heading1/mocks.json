@@ -1,0 +1,24 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "heading1",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Embrace bricks-and-clicks infomediaries",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Ad reprehenderit exercitation dolore aute sint ullamco pariatur adipisicing est tempor ex. Ea ad labore non veniam ullamco eu in. Enim cillum eu sit aute aliqua commodo tempor elit cillum laborum sunt nisi nisi.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

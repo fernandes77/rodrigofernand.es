@@ -1,5 +1,5 @@
 import Contact from 'templates/Contact'
 
-export default function ContactPage() {
+export default function contact() {
   return <Contact />
 }

@@ -34,5 +34,6 @@ export const MenuLink = styled.a`
     cursor: pointer;
     padding: ${theme.spacings.xxsmall} ${theme.spacings.large};
     font-size: ${theme.font.sizes.xlarge};
+    color: ${theme.colors.white};
   `}
 `

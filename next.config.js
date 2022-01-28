@@ -6,5 +6,9 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
     disable: !isProd
+  },
+  images: {
+    domains: ['images.prismic.io'],
+    formats: ['image/avif', 'image/webp', 'image/png', 'image/jpeg']
   }
 })

@@ -12,7 +12,11 @@ const MenuItem = ({ label, href }: MenuItemProps) => {
   const router = useRouter()
 
   return (
-    <S.Wrapper active={router.pathname == href}>
+    <S.Wrapper
+      active={
+        href == '/' ? router.pathname === '/' : router.asPath.includes(href)
+      }
+    >
       <Link href={href}>
         <S.MenuLink>{label}</S.MenuLink>
       </Link>

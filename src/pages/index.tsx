@@ -1,13 +1,5 @@
-import Sidebar from 'components/Sidebar'
-import Main from 'components/Main'
+import Home from 'templates/Home'
 
-export default function Home() {
-  return (
-    <>
-      <Sidebar />
-      <Main>
-        <h1>Work in progress...</h1>
-      </Main>
-    </>
-  )
+export default function home() {
+  return <Home />
 }
