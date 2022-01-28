@@ -36,7 +36,6 @@ Create a folder called **generators** at the root of your project.
 Let's say my component architecture is a folder with an **index.tsx** file and a **styles.ts** file. Create a file called **plopfile.js** inside generators and paste this config:
 
 ```
-
 module.exports = function (plop) {
   plop.setGenerator('component', {
     description: 'application component logic',
@@ -66,3 +65,5 @@ module.exports = function (plop) {
   })
 }
 ```
+
+...
