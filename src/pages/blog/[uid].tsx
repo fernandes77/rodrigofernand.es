@@ -33,24 +33,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  if (typeof context.params?.uid === 'string') {
-    const post = await Client().getByUID('blog_post', context.params.uid, {
-      lang: 'en-us'
-    })
-
-    console.log(post)
-
-    return {
-      props: {
-        uid: post.uid,
-        date: post.data.date,
-        title: post.data.title,
-        description: post.data.description,
-        content: post.data.content
-      }
-    }
-  }
-
   return {
     props: {}
   }
