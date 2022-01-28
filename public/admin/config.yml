@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   auth_endpoint: api/auth/
 
 media_folder: public/img
