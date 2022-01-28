@@ -4,7 +4,7 @@ import Prismic from '@prismicio/client'
 import BlogPost, { PostProps } from 'templates/BlogPost'
 import Client from '../../../utils/prismicHelpers'
 
-export default function uidBlog(props: PostProps) {
+export default function uidBlog() {
   return <BlogPost />
 }
 
