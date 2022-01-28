@@ -12,6 +12,7 @@ collections:
   - name: posts
     label: posts
     folder: posts
+    extension: json
     create: true
     slug: '{{slug}}'
     fields:
