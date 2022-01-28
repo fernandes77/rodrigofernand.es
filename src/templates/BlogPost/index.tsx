@@ -16,10 +16,10 @@ export type PostProps = {
   content: RichTextBlock[]
 }
 
-const BlogPost = ({ date, title, description, content }: PostProps) => (
+const BlogPost = () => (
   <Container>
     <S.Wrapper>
-      <header>
+      {/* <header>
         <time>
           {new Date(date).toLocaleDateString('en-US', {
             year: 'numeric',
@@ -32,7 +32,7 @@ const BlogPost = ({ date, title, description, content }: PostProps) => (
       </header>
       <section>
         <RichText render={content} linkResolver={linkResolver} />
-      </section>
+      </section> */}
     </S.Wrapper>
   </Container>
 )

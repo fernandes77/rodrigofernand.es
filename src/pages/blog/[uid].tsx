@@ -5,7 +5,7 @@ import BlogPost, { PostProps } from 'templates/BlogPost'
 import Client from '../../../utils/prismicHelpers'
 
 export default function uidBlog(props: PostProps) {
-  return <BlogPost {...props} />
+  return <BlogPost />
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
