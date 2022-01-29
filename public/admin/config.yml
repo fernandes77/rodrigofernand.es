@@ -6,7 +6,7 @@ backend:
 
 media_folder: public/img
 publish_mode: editorial_workflow
-format: markdown
+extension: md
 slug:
   encoding: 'ascii'
   clean_accents: true
