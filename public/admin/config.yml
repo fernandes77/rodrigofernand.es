@@ -5,8 +5,11 @@ backend:
   auth_endpoint: api/auth/
 
 media_folder: public/img
-
 publish_mode: editorial_workflow
+format: markdown
+slug:
+  encoding: 'ascii'
+  clean_accents: true
 
 collections:
   - name: posts
