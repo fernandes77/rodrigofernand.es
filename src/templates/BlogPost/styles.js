@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     letter-spacing: 0.07rem;
 
     & header {
-      margin-bottom: 6rem;
+      margin-bottom: 5rem;
 
       & time {
         font-weight: 300;
