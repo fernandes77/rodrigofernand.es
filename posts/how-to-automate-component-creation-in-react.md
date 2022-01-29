@@ -65,7 +65,6 @@ const Button = () => (
 )
 
 export default Button
-
 ```
 
 ### Styles file
@@ -80,7 +79,7 @@ export const Wrapper = styled.div``
 
 This is what we have so far:
 
-![generators](/public/img/2022-01-29_19-32.png)
+![generators](/img/2022-01-29_19-32.png)
 
 ## Making it work
 
