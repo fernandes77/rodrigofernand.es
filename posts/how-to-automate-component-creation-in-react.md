@@ -6,8 +6,6 @@ title: How to automate component creation in React
 description: Generate new components without having to import basic libraries
   and write boilerplate code
 ---
-
-
 When developing a React project, we constantly have to create new components. This is good practice, as it follows the principles of Atomic Design where you develop a component for every "atom" of your project's Design System.
 
 However, there are some things that have to be done every time we do this. They are usually done by copying and pasting another component, renaming it, renaming constant/variable names inside the files and erasing the rest of the code.
@@ -66,7 +64,8 @@ const Button = () => (
   </S.Wrapper>
 )
 
-export default Buttonplop.js
+export default Button
+
 ```
 
 ### Styles file
