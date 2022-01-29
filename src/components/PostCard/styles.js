@@ -5,7 +5,7 @@ export const Card = styled.article`
     display: block;
     width: 30rem;
     height: fit-content;
-    background-color: ${theme.colors.mainBg};
+    background-color: ${theme.colors.card};
     box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
     cursor: pointer;
     transition: ${theme.transition.fast};

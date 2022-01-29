@@ -11,7 +11,7 @@ const breakpointColumnsObj = {
   1024: 1
 }
 
-const Blog = () => {
+const Blog = ({ posts }) => {
   return (
     <Container>
       <S.Wrapper>
@@ -20,9 +20,9 @@ const Blog = () => {
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          {/* {posts.map((post, index) => (
+          {posts.map((post, index) => (
             <PostCard key={index} {...post} />
-          ))} */}
+          ))}
         </Masonry>
       </S.Wrapper>
     </Container>

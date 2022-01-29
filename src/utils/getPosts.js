@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import matter from 'gray-matter'
 import { join } from 'path'
 import fs from 'fs'
@@ -15,9 +16,11 @@ export function getPostBySlug(slug) {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  const date = format(new Date(data.date), "MMMM DDDD',' yyyy", {
+  const date = format(new Date(data.date), "MMMM do',' yyyy", {
     locale: us
   })
+
+  data.image = data.image.replace('/public', '')
 
   return {
     slug: realSlug,

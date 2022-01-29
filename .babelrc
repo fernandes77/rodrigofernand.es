@@ -7,7 +7,23 @@
         "ssr": true,
         "displayName": true
       }
-    ]
+    ],
+    ["prismjs",
+    {
+      "languages": [
+        "javascript",
+        "css",
+        "typescript",
+        "json",
+        "jsx",
+        "markdown",
+        "bash",
+        "yaml"
+      ],
+      "plugins": ["line-numbers"],
+      "theme": "tomorrow",
+      "css": true
+    }]
   ],
   "env": {
     "test": {
@@ -18,13 +34,7 @@
             "ssr": false,
             "displayName": false
           }
-        ],
-        ["prismjs", {
-          "languages": ["javascript", "css", "markup"],
-          "plugins": ["line-numbers"],
-          "theme": "twilight",
-          "css": true
-        }]
+        ]
       ]
     }
   }

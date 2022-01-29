@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
     margin-right: auto;
     margin-left: auto;
     max-width: 92rem;
+    letter-spacing: 0.07rem;
 
     & header {
       margin-bottom: 6rem;
@@ -19,7 +20,7 @@ export const Wrapper = styled.div`
       & h1 {
         font-size: 6.4rem;
         line-height: 1;
-        margin: 1.6rem 0;
+        margin: 1.6rem 0 2rem;
       }
 
       & h2 {
@@ -33,6 +34,10 @@ export const Wrapper = styled.div`
     & h2 {
       font-size: 3.2rem;
       margin: 3.6rem 0 1.6rem;
+
+      & a {
+        color: ${theme.colors.white};
+      }
     }
 
     & p,
@@ -52,6 +57,7 @@ export const Wrapper = styled.div`
     & pre {
       margin-bottom: 2.4rem;
       background-color: ${theme.colors.sidebarBg};
+      padding: 1.2rem;
     }
 
     & .block-img {
@@ -61,11 +67,6 @@ export const Wrapper = styled.div`
         max-width: 100%;
         max-height: 100vh;
       }
-    }
-
-    & strong {
-      font-weight: 400;
-      background-color: ${theme.colors.highlight};
     }
   `}
 `

@@ -1,11 +1,10 @@
-import BlogPost, { PostProps } from 'templates/BlogPost'
+import BlogPost from 'templates/BlogPost'
 
 import { getPostBySlug, getAllPosts } from 'utils/getPosts'
 import markdownToHtml from 'utils/markdownToHtml'
 
-export default function post(/* post */) {
-  /* return <BlogPost post={post} /> */
-  return <h1>hi</h1>
+export default function post(post) {
+  return <BlogPost post={post} />
 }
 
 export const getStaticPaths = async () => {
@@ -23,17 +22,10 @@ export const getStaticProps = async ({ params }) => {
   const post = getPostBySlug(slug)
   const content = await markdownToHtml(post.content || '')
 
-  const allPosts = getAllPosts()
-  const currentPostIndex = allPosts.findIndex((p) => p.slug === slug)
-  const nextPost = allPosts[currentPostIndex - 1] ?? null
-  const prevPost = allPosts[currentPostIndex + 1] ?? null
-
   return {
     props: {
       ...post,
-      content,
-      nextPost,
-      prevPost
+      content
     }
   }
 }

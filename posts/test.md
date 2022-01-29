@@ -2,9 +2,8 @@
 layout: post
 date: 2022-01-29 02:46:19
 image: /public/img/jake-walker-mpkqidpmyqu-unsplash.jpg
-title: How to automate component creation in React
-description: Generate new components without having to import basic libraries
-  and write boilerplate code
+title: Test
+description: This is a test post
 ---
 When developing a React project, we constantly have to create new components. This is good practice, as it follows the principles of Atomic Design where you develop a component for every "atom" of your project's Design System.
 
@@ -33,11 +32,11 @@ $ yarn add -D plop
 
 ## Configuring Plop.js
 
-Create a folder called *generators* at the root of your project.
+Create a folder called **generators** at the root of your project.
 
-Let's say my component architecture is a folder with an *index.tsx* file and a *styles.ts* file. Create a file called *plopfile.js* inside generators and paste this config:
+Let's say my component architecture is a folder with an **index.tsx** file and a **styles.ts** file. Create a file called **plopfile.js** inside generators and paste this config:
 
-```js
+```
 module.exports = function (plop) {
   plop.setGenerator('component', {
     description: 'application component logic',

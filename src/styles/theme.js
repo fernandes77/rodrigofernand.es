@@ -30,6 +30,7 @@ export default {
     mainBg: '#282C35',
     lightBg: '#F2F2F2',
     sidebarBg: '#21252A',
+    card: '#323742',
     highlight: '#515967',
     white: '#FFFFFF',
     black: '#121212',

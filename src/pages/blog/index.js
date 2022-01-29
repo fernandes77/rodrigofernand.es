@@ -1,12 +1,32 @@
-import Prismic from '@prismicio/client'
+/* eslint-disable no-undef */
+import fs from 'fs'
 
-import Blog, { BlogProps } from 'templates/Blog'
-import { PostProps } from 'templates/BlogPost'
+import { buildAlgoliaIndexes } from 'utils/buildAlgoliaIndexes'
+import { generateRss } from 'utils/generateRSS'
+import { generateSitemap } from 'utils/generateSitemap'
+import { getAllPosts } from 'utils/getPosts'
 
-export default function blog() {
-  return <Blog />
+import Blog from 'templates/Blog'
+
+export default function blog({ posts }) {
+  return <Blog posts={posts} />
 }
 
 export async function getStaticProps() {
-  return { props: {} }
+  const posts = getAllPosts()
+
+  if (process.env.NODE_ENV !== 'development') {
+    await generateSitemap(posts)
+
+    const rss = await generateRss(posts)
+    fs.writeFileSync('./public/feed.xml', rss)
+
+    await buildAlgoliaIndexes(posts)
+  }
+
+  return {
+    props: {
+      posts
+    }
+  }
 }
