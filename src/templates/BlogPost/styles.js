@@ -33,7 +33,16 @@ export const Wrapper = styled.div`
 
     & h2 {
       font-size: 3.2rem;
-      margin: 3.6rem 0 1.6rem;
+      margin: 5rem 0 1.6rem;
+
+      & a {
+        color: ${theme.colors.white};
+      }
+    }
+
+    & h3 {
+      font-size: 2rem;
+      margin-bottom: 1.6rem;
 
       & a {
         color: ${theme.colors.white};
