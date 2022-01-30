@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import fs from 'fs'
+import { NextSeo } from 'next-seo'
 
 import { buildAlgoliaIndexes } from 'utils/buildAlgoliaIndexes'
 import { generateRss } from 'utils/generateRSS'
@@ -9,7 +10,21 @@ import { getAllPosts } from 'utils/getPosts'
 import Blog from 'templates/Blog'
 
 export default function blog({ posts }) {
-  return <Blog posts={posts} />
+  return (
+    <>
+      <NextSeo
+        title="Blog | Rodrigo Fernandes"
+        description="A blog made by a brazilian web developer who likes React."
+        openGraph={{
+          url: 'https://rodrigofernand.es/blog',
+          title: 'Blog | Rodrigo Fernandes',
+          description:
+            'A blog made by a brazilian web developer who likes React.'
+        }}
+      />
+      <Blog posts={posts} />
+    </>
+  )
 }
 
 export async function getStaticProps() {

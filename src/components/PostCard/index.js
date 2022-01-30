@@ -7,11 +7,7 @@ const PostCard = ({ slug, frontmatter }) => (
   <Link href={`/blog/${slug}`}>
     <S.Card>
       <S.ImgWrapper>
-        <Image
-          src="/img/jake-walker-mpkqidpmyqu-unsplash.jpg"
-          layout="fill"
-          placeholder="blur"
-        />
+        <Image src={frontmatter.image} layout="fill" placeholder="blur" />
       </S.ImgWrapper>
       <S.TextWrapper>
         <S.Date>{frontmatter.date}</S.Date>

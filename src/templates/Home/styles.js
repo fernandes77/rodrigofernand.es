@@ -20,7 +20,8 @@ export const Description = styled.div`
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.6;
-  width: 76rem;
+  max-width: 76rem;
+  width: 100%;
 
   & p {
     margin-top: 1rem;

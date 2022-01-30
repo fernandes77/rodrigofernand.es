@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2022-01-29 02:46:19
-image: /img/jake-walker-mpkqidpmyqu-unsplash.jpg
+image: /img/how-to-automate-component-creation-in-react.jpg
 title: How to automate component creation in React
 description: Generate new components without having to import basic libraries
   and write boilerplate code

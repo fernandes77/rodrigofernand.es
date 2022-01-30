@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import NextNProgress from 'nextjs-progressbar'
+import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
+
+import SEO from '../../next-seo-config'
 
 function App({ Component, pageProps }) {
   return (
@@ -13,13 +16,13 @@ function App({ Component, pageProps }) {
           <title>Rodrigo Fernandes</title>
           <link rel="shortcut icon" href="/img/logo-favicon.svg" />
           <link rel="apple-touch-icon" href="/img/logo-favicon.svg" />
-          <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content={theme.colors.primary} />
           <meta
             name="description"
-            content="A simple project starter to work with Typescript, React, NextJS and Styled Components"
+            content="A website made by a brazilian web developer who likes React."
           />
         </Head>
+        <DefaultSeo {...SEO} />
         <GlobalStyles />
         <NextNProgress
           color={theme.colors.primary}
