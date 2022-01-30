@@ -56,6 +56,13 @@ export const Wrapper = styled.div`
       font-size: 2rem;
       font-weight: 300;
       line-height: 1.6;
+
+      & code {
+        background-color: ${theme.colors.highlight};
+        padding: 0.1rem 0.3rem;
+        border-radius: 3px;
+        font-size: 1.8rem;
+      }
     }
 
     & ol,

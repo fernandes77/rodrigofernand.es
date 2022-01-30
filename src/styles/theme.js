@@ -10,6 +10,7 @@ export default {
   font: {
     family:
       "Open Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+    code: 'Droid Sans Mono, monospace',
     light: 300,
     normal: 400,
     bold: 700,

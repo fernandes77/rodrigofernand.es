@@ -37,6 +37,16 @@ const GlobalStyles = createGlobalStyle`
         url('/fonts/open-sans-v27-latin-800.woff2') format('woff2');
   }
 
+
+  @font-face {
+    font-family: 'Droid Sans Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/droid-sans-mono-v2.woff2') format('woff2');
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -78,6 +88,10 @@ ${({ theme, removeBg }) => css`
     &:active {
       opacity: 0.7;
     }
+  }
+
+  code {
+    font-family: ${theme.font.code};
   }
 `}
 `

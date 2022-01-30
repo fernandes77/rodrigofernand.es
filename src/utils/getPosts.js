@@ -20,8 +20,6 @@ export function getPostBySlug(slug) {
     locale: us
   })
 
-  data.image = data.image.replace('/public', '')
-
   return {
     slug: realSlug,
     date: data.date.toString(),

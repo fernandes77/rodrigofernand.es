@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2022-01-29 02:46:19
-image: /public/img/jake-walker-mpkqidpmyqu-unsplash.jpg
+image: /img/jake-walker-mpkqidpmyqu-unsplash.jpg
 title: How to automate component creation in React
 description: Generate new components without having to import basic libraries
   and write boilerplate code
@@ -19,7 +19,7 @@ In this article, I will show you how to generate a new component with a simple c
 
 ## Installing Plop.js
 
-Add `plop.js` to your project with:
+Add `plop` to your project with:
 
 ```
 $ npm install --save-dev plop
@@ -39,7 +39,7 @@ Create a folder called `generators` at the root of your project. Inside, create 
 
 Now, create your index React component template file. In my case, every component has an `index.tsx` file so I will create a template file called `index.tsx.hbs`:
 
-```hbs
+```jsx
 import * as S from './styles'
 
 const {{pascalCase name}} = () => (
@@ -129,11 +129,11 @@ Finally, we'll create the script that will do all this work for us. In your `pac
 Now, all you have to do to create a new component, for example a `Button`, is go to your terminal run the command:
 
 ```
-npm run generate Button
+$ npm run generate Button
 
 or
 
-yarn generate Button
+$ yarn generate Button
 ```
 
 That's it! It will generate the `Button` folder inside `components` which will have the `index.tsx` and `styles.ts` files. If your components have more files (tests, for example) you can easily create the template file and add it to your `plopfile.js` actions.
