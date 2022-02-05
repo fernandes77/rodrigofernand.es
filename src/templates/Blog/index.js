@@ -8,7 +8,7 @@ import * as S from './styles'
 const breakpointColumnsObj = {
   default: 3,
   1400: 2,
-  1024: 1
+  768: 1
 }
 
 const Blog = ({ posts }) => {

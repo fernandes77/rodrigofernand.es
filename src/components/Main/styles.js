@@ -5,5 +5,9 @@ export const Wrapper = styled.main`
     padding-left: ${theme.grid.sidebar};
     min-height: 100vh;
     width: 100%;
+
+    @media (max-width: 1024px) {
+      padding-left: 0;
+    }
   `}
 `

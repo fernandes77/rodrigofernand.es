@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.form`
   ${({ theme }) => css`
-    & > input,
+    & input,
     & > textarea {
       margin-top: ${theme.spacings.xsmall};
     }
@@ -14,8 +14,16 @@ export const InputSplit = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   & > input {
     width: 49%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 `
 
@@ -28,6 +36,10 @@ export const SubmitButton = styled.div`
 
     & > button {
       width: 25%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   `}
 `

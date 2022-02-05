@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
     max-width: 92rem;
     letter-spacing: 0.07rem;
 
+    @media (max-width: 1024px) {
+      padding: 6rem 2rem 4rem;
+    }
+
     & header {
       margin-bottom: 5rem;
 
@@ -21,6 +25,14 @@ export const Wrapper = styled.div`
         font-size: 6.4rem;
         line-height: 1;
         margin: 1.6rem 0 2rem;
+
+        @media (max-width: 1024px) {
+          font-size: 4.8rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 4rem;
+        }
       }
 
       & h2 {
@@ -28,12 +40,20 @@ export const Wrapper = styled.div`
         font-weight: 300;
         line-height: 1.1;
         margin: 0;
+
+        @media (max-width: 1024px) {
+          font-size: 2.6rem;
+        }
       }
     }
 
     & h2 {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
       margin: 5rem 0 1.6rem;
+
+      @media (max-width: 768px) {
+        font-size: 2.4rem;
+      }
 
       & a {
         color: ${theme.colors.white};
@@ -74,15 +94,13 @@ export const Wrapper = styled.div`
       margin-bottom: 2.4rem;
       background-color: ${theme.colors.sidebarBg};
       padding: 1.2rem;
+      max-width: 100%;
+      overflow-x: scroll;
     }
 
-    & .block-img {
+    & img {
       max-width: 100%;
-
-      & img {
-        max-width: 100%;
-        max-height: 100vh;
-      }
+      max-height: 100vh;
     }
   `}
 `

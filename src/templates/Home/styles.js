@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   padding: 8rem 10rem;
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+  }
 `
 
 export const Introduction = styled.h1`
