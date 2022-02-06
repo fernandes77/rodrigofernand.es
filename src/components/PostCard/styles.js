@@ -4,6 +4,7 @@ export const Card = styled.article`
   ${({ theme }) => css`
     display: block;
     width: 30rem;
+    max-width: 100%;
     height: fit-content;
     background-color: ${theme.colors.card};
     box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
