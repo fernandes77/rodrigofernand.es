@@ -12,7 +12,7 @@ export default function post(post) {
         title={`${post.frontmatter.title} - Rodrigo Fernandes`}
         description={post.frontmatter.description}
         openGraph={{
-          url: `https://rodrigofernand.es/${post.slug}`,
+          url: `https://rodrigofernand.es/blog/${post.slug}`,
           title: `${post.frontmatter.title} - Rodrigo Fernandes`,
           description: post.frontmatter.description,
           images: [
