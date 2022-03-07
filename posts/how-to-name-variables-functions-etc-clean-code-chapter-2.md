@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-02-12 10:23:08
+date: 2022-03-06 10:59:21
 image: /img/jon-tyson-566cgcrsnck-unsplash-1-.jpg
 title: How to name variables, functions, etc - Clean Code, Chapter 2
 description: This chapter contains ideas on how to communicate your code's
