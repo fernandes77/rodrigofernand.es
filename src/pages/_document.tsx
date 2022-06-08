@@ -5,10 +5,11 @@ import Document, {
   NextScript,
   DocumentContext
 } from 'next/document'
+import { JSXElementConstructor, ReactElement, ReactFragment } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
@@ -27,7 +28,7 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        )
+        ) as unknown as ReactElement<any, string | JSXElementConstructor<any>>[]
       }
     } finally {
       sheet.seal()
