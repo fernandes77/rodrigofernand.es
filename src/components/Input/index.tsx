@@ -1,5 +1,14 @@
 import * as S from './styles'
 
+type InputProps = {
+  type?: React.HTMLInputTypeAttribute
+  name?: string
+  id?: string
+  placeholder?: string
+  required?: boolean
+  maxLength?: number
+}
+
 const Input = ({
   type,
   name,
@@ -7,7 +16,7 @@ const Input = ({
   placeholder,
   required = false,
   maxLength
-}) => (
+}: InputProps) => (
   <S.Wrapper
     type={type}
     name={name}

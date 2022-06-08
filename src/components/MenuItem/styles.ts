@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 
 export const wrapperModifiers = {
   active: (theme) => css`
@@ -7,7 +7,11 @@ export const wrapperModifiers = {
   `
 }
 
-export const Wrapper = styled.div`
+type WrapperProps = {
+  active: boolean
+}
+
+export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, active }) => css`
     position: relative;
     width: 100%;

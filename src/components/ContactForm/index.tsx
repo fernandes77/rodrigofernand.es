@@ -8,9 +8,11 @@ import * as S from './styles'
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm('xoqrveed')
+
   if (state.submitting) {
     return <p>Loading...</p>
   }
+
   if (state.succeeded) {
     return <p>Thanks for getting in touch!</p>
   }

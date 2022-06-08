@@ -1,6 +1,10 @@
 import * as S from './styles'
 
-const SocialIcon = ({ platform }) => {
+type SocialIconProps = {
+  platform: 'GitHub' | 'LinkedIn'
+}
+
+const SocialIcon = ({ platform }: SocialIconProps) => {
   switch (platform) {
     case 'GitHub':
       return (

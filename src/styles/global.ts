@@ -64,35 +64,35 @@ const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
   }
 
-${({ theme, removeBg }) => css`
-  body {
-    font-family: ${theme.font.family};
-    font-size: ${theme.font.sizes.medium};
-    color: ${theme.colors.white};
+  ${({ theme, removeBg }: any) => css`
+    body {
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.sizes.medium};
+      color: ${theme.colors.white};
 
-    ${!removeBg &&
-    css`
-      background-color: ${theme.colors.mainBg};
-    `}
-  }
-
-  a {
-    color: ${theme.colors.secondary};
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      opacity: 0.85;
+      ${!removeBg &&
+      css`
+        background-color: ${theme.colors.mainBg};
+      `}
     }
 
-    &:active {
-      opacity: 0.7;
-    }
-  }
+    a {
+      color: ${theme.colors.secondary};
+      text-decoration: none;
 
-  code {
-    font-family: ${theme.font.code};
-  }
-`}
+      &:hover,
+      &:focus {
+        opacity: 0.85;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
+    }
+
+    code {
+      font-family: ${theme.font.code};
+    }
+  `}
 `
 export default GlobalStyles

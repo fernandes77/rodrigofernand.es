@@ -3,7 +3,12 @@ import { useRouter } from 'next/router'
 
 import * as S from './styles'
 
-const MenuItem = ({ label, href }) => {
+type MenuItemProps = {
+  label: string
+  href: string
+}
+
+const MenuItem = ({ label, href }: MenuItemProps) => {
   const router = useRouter()
 
   return (

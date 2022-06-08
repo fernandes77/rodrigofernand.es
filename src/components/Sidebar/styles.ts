@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.aside`
+type ToggleOpenProps = {
+  isOpen: boolean
+}
+
+export const Wrapper = styled.aside<ToggleOpenProps>`
   ${({ theme, isOpen }) => css`
     position: fixed;
     top: 0;
@@ -91,7 +95,7 @@ export const Links = styled.div`
   height: 16rem;
 `
 
-export const Overlay = styled.div`
+export const Overlay = styled.div<ToggleOpenProps>`
   ${({ isOpen }) => css`
     display: none;
     ${isOpen &&
