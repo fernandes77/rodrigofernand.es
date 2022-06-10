@@ -38,7 +38,8 @@ export default {
     grey: '#ABB2BE',
     greyDark: '#7F848E',
     greyActive: '#323841',
-    inputBg: '#343A45'
+    inputBg: '#343A45',
+    pomodoro: '#FF5C6F'
   },
   spacings: {
     xxsmall: '0.8rem',
