@@ -12,13 +12,11 @@ const Pomodoro = () => (
   <PomodoroContext.Provider value={usePomodoro()}>
     <Container>
       <S.Wrapper>
-        <S.Wrapper>
-          <TomatoList />
+        <TomatoList />
 
-          <S.PomodoroCounterWrapper>
-            <PomodoroBox />
-          </S.PomodoroCounterWrapper>
-        </S.Wrapper>
+        <S.PomodoroCounterWrapper>
+          <PomodoroBox />
+        </S.PomodoroCounterWrapper>
       </S.Wrapper>
     </Container>
   </PomodoroContext.Provider>

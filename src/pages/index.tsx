@@ -1,21 +1,21 @@
 import { NextSeo } from 'next-seo'
 
-import Home from 'templates/Home'
+import Projects from 'templates/Projects'
 
-export default function home() {
+export default function contact() {
   return (
     <>
       <NextSeo
-        title="Home | Rodrigo Fernandes"
-        description="A website made by a brazilian web developer who likes React."
+        title="Projects | Rodrigo Fernandes"
+        description="Checkout some of the projects that I made for this website."
         openGraph={{
           url: 'https://rodrigofernand.es/',
-          title: 'Home | Rodrigo Fernandes',
+          title: 'Projects | Rodrigo Fernandes',
           description:
-            'A website made by a brazilian web developer who likes React.'
+            'Checkout some of the projects that I made for this website.'
         }}
       />
-      <Home />
+      <Projects />
     </>
   )
 }

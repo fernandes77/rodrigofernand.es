@@ -9,7 +9,7 @@ export default function contact() {
         title="Pomodoro | Rodrigo Fernandes"
         description="Increase your productivity with the Pomodoro technique."
         openGraph={{
-          url: 'https://rodrigofernand.es/projects/pomodoro',
+          url: 'https://rodrigofernand.es/pomodoro',
           title: 'Pomodoro | Rodrigo Fernandes',
           description: 'Increase your productivity with the Pomodoro technique.'
         }}

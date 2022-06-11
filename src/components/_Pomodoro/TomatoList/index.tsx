@@ -12,10 +12,16 @@ const TomatoList = () => {
   return (
     <S.Wrapper>
       {[...Array(completedPomodoros)].map((id, key) => (
-        <Tomato key={key} completed />
+        <S.TomatoWrapper key={key}>
+          <Tomato key={key} completed />
+        </S.TomatoWrapper>
       ))}
 
-      {isCountingPomodoro && <Tomato />}
+      {isCountingPomodoro && (
+        <S.TomatoWrapper>
+          <Tomato />
+        </S.TomatoWrapper>
+      )}
     </S.Wrapper>
   )
 }

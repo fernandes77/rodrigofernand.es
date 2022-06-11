@@ -6,19 +6,11 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 6rem;
-  width: min(100%, 48rem);
-  margin: 0 auto;
+  width: min(100%, 28rem);
+  margin: 3.2rem auto 0;
+`
 
-  & > div {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-
-    & :first-child {
-      margin-left: 0;
-    }
-
-    & :last-child {
-      margin-right: 0;
-    }
-  }
+export const TomatoWrapper = styled.div`
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 `

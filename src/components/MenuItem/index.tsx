@@ -1,5 +1,8 @@
+import { useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+
+import projectList from 'templates/Projects/list'
 
 import * as S from './styles'
 
@@ -11,10 +14,15 @@ type MenuItemProps = {
 const MenuItem = ({ label, href }: MenuItemProps) => {
   const router = useRouter()
 
+  const parsedProjectPaths = projectList.map((project) => project.slug)
+
   return (
     <S.Wrapper
       active={
-        href == '/' ? router.pathname === '/' : router.asPath.includes(href)
+        href == '/'
+          ? router.pathname === '/' ||
+            parsedProjectPaths.includes(router.pathname)
+          : router.asPath.includes(href)
       }
     >
       <Link href={href}>
