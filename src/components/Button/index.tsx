@@ -6,7 +6,7 @@ type ButtonProps = {
   label: string
   type: 'button' | 'submit' | 'reset'
   loading?: boolean
-  onClick: React.MouseEventHandler<HTMLButtonElement>
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
 const Button = ({ label, type, loading = false, onClick }) => (
