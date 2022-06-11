@@ -9,7 +9,7 @@ type ButtonProps = {
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const Button = ({ label, type, loading = false, onClick }) => (
+const Button = ({ label, type, loading = false, onClick }: ButtonProps) => (
   <S.Wrapper type={type} onClick={onClick}>
     {label}
   </S.Wrapper>
