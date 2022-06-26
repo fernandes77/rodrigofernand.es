@@ -1,5 +1,6 @@
 const useNotifications = () => {
   const checkIOS = () => {
+    if (typeof navigator === 'undefined') return false
     return (
       [
         'iPad Simulator',
