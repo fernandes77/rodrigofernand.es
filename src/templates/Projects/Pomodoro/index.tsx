@@ -15,7 +15,7 @@ const Pomodoro = () => (
     <Container>
       <S.Wrapper>
         <S.NotificationsWrapper>
-          <PomodoroNotifications />
+          {/* <PomodoroNotifications /> */}
         </S.NotificationsWrapper>
 
         <S.GameWrapper>

@@ -34,7 +34,7 @@ const PomodoroCounter = () => {
     setSelectedTab
   } = useContext(PomodoroContext)
 
-  const { notify } = useNotifications()
+  /* const { notify } = useNotifications() */
 
   const [showButtons, setShowButtons] = useState<boolean>(false)
 
@@ -51,7 +51,7 @@ const PomodoroCounter = () => {
       setIsCounting: setIsCountingShortBreak,
       finish: () => {
         play(finishBreakSound)
-        notify(finishBreakNotificationTitle, finishBreakNotificationBody)
+        /* notify(finishBreakNotificationTitle, finishBreakNotificationBody) */
         setSelectedTab('POMODORO')
       }
     },
@@ -61,7 +61,7 @@ const PomodoroCounter = () => {
       setIsCounting: setIsCountingLongBreak,
       finish: () => {
         play(finishBreakSound)
-        notify(finishBreakNotificationTitle, finishBreakNotificationBody)
+        /* notify(finishBreakNotificationTitle, finishBreakNotificationBody) */
         setSelectedTab('POMODORO')
       }
     }
