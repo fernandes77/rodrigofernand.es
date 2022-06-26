@@ -17,4 +17,8 @@ export const Label = styled.h1`
 export const TimerWrapper = styled.div`
   padding: 3rem 4rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 3rem 2rem;
+  }
 `

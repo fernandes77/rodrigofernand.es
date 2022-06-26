@@ -5,6 +5,10 @@ export const Wrapper = styled.div``
 export const Counter = styled.span`
   font-weight: 700;
   font-size: 10rem;
+
+  @media (max-width: 768px) {
+    font-size: 7.2rem;
+  }
 `
 
 type ButtonsWrapperProps = {
