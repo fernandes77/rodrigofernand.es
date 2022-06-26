@@ -20,7 +20,7 @@ const usePomodoro = () => {
 
   const { pickRandomArrayElement } = useUtils()
 
-  /* const { notify } = useNotifications() */
+  const { notify } = useNotifications()
 
   const [completedPomodoros, setCompletedPomodoros] = useState<number>(0)
 
@@ -39,13 +39,13 @@ const usePomodoro = () => {
     if (completedPomodoros !== 0 && (completedPomodoros + 1) % 4 === 0) {
       play(pickRandomArrayElement(specialFinishSounds))
 
-      /* notify(specialFinishNotificationTitle, specialFinishNotificationBody) */
+      notify(specialFinishNotificationTitle, specialFinishNotificationBody)
 
       setSelectedTab('LONG_BREAK')
     } else {
       play(pickRandomArrayElement(finishSounds))
 
-      /* notify(finishNotificationTitle, finishNotificationBody) */
+      notify(finishNotificationTitle, finishNotificationBody)
 
       setSelectedTab('SHORT_BREAK')
     }

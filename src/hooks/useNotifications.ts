@@ -1,5 +1,11 @@
 const useNotifications = () => {
+  const checkNotification = () => {
+    return 'Notification' in window
+  }
+
   const checkNotificationPromise = () => {
+    if (!checkNotification()) return false
+
     try {
       Notification.requestPermission().then()
     } catch (e) {
@@ -10,7 +16,7 @@ const useNotifications = () => {
   }
 
   const getPermissions = async () => {
-    if (!('Notification' in window)) {
+    if (!checkNotification()) {
       console.log('This browser does not support notifications.')
       return 'denied'
     } else {
@@ -27,10 +33,12 @@ const useNotifications = () => {
   }
 
   const notify = (title: string, body?: string) => {
-    if (Notification.permission === 'granted') {
-      new Notification(title, {
-        body
-      })
+    if (checkNotification()) {
+      if (Notification.permission === 'granted') {
+        new Notification(title, {
+          body
+        })
+      }
     }
   }
 
