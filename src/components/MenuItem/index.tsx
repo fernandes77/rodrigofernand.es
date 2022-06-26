@@ -1,8 +1,7 @@
-import { useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import projectList from 'templates/Projects/list'
+import projectList from 'config/projectList'
 
 import * as S from './styles'
 

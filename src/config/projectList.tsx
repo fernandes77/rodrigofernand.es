@@ -4,8 +4,9 @@ const projectList = [
   {
     slug: '/pomodoro',
     icon: <Tomato completed />,
-    name: 'Pomodoro',
-    description: 'A pomodoro timer'
+    name: 'GTA IV Pomodoro',
+    description:
+      'A pomodoro timer, but every time you complete 25 minutes a "mission completed" sound is played.'
   }
 ]
 

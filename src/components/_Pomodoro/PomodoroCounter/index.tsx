@@ -1,14 +1,26 @@
 import { useCallback, useContext, useEffect, useState } from 'react'
 
+import {
+  finishBreakNotification,
+  finishBreakSound,
+  resetSound,
+  startSound,
+  stopSound
+} from 'config/pomodoro/gtaIV'
+
 import Button from 'components/Button'
 
 import useFormatting from 'hooks/useFormatting'
+import useAudio from 'hooks/useAudio'
 
-import PomodoroContext, { Tabs } from 'contexts/pomodoro'
+import PomodoroContext from 'contexts/pomodoro'
+import NotificationsContext from 'contexts/notifications'
 
 import * as S from './styles'
 
 const PomodoroCounter = () => {
+  const { play } = useAudio()
+
   const {
     isCountingPomodoro,
     setIsCountingPomodoro,
@@ -20,6 +32,8 @@ const PomodoroCounter = () => {
     selectedTab,
     setSelectedTab
   } = useContext(PomodoroContext)
+
+  const { notify } = useContext(NotificationsContext)
 
   const [showButtons, setShowButtons] = useState<boolean>(false)
 
@@ -35,6 +49,8 @@ const PomodoroCounter = () => {
       isCounting: isCountingShortBreak,
       setIsCounting: setIsCountingShortBreak,
       finish: () => {
+        play(finishBreakSound)
+        notify(finishBreakNotification)
         setSelectedTab('POMODORO')
       }
     },
@@ -43,6 +59,8 @@ const PomodoroCounter = () => {
       isCounting: isCountingLongBreak,
       setIsCounting: setIsCountingLongBreak,
       finish: () => {
+        play(finishBreakSound)
+        notify(finishBreakNotification)
         setSelectedTab('POMODORO')
       }
     }
@@ -66,7 +84,14 @@ const PomodoroCounter = () => {
     resetTime()
   }, [resetTime])
 
+  const handleReset = useCallback(() => {
+    play(resetSound)
+    resetTime()
+  }, [play, resetTime])
+
   const handleStartStop = useCallback(() => {
+    play(isCounting ? stopSound : startSound)
+
     setIsCounting(!isCounting)
 
     setShowButtons(true)
@@ -108,7 +133,7 @@ const PomodoroCounter = () => {
 
       <S.ButtonsWrapper center={!showButtons}>
         {showButtons && (
-          <Button label="Reset" type="button" onClick={() => resetTime()} />
+          <Button label="Reset" type="button" onClick={() => handleReset()} />
         )}
 
         <Button

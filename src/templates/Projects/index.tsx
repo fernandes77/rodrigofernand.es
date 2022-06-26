@@ -1,10 +1,11 @@
 import Masonry from 'react-masonry-css'
 
+import projectList from 'config/projectList'
+
 import Container from 'components/Container'
 import ProjectCard from 'components/ProjectCard'
 
 import * as S from './styles'
-import projectList from './list'
 
 const breakpointColumnsObj = {
   default: 3,

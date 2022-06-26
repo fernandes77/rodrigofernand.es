@@ -2,6 +2,8 @@ import { createContext } from 'react'
 
 export type Tabs = 'POMODORO' | 'SHORT_BREAK' | 'LONG_BREAK'
 
+export type Games = 'GTA_IV'
+
 type PomodoroContext = {
   completedPomodoros: number
   setCompletedPomodoros: React.Dispatch<React.SetStateAction<number>>
@@ -14,9 +16,11 @@ type PomodoroContext = {
   onFinishPomodoro: () => void
   selectedTab: Tabs
   setSelectedTab: React.Dispatch<React.SetStateAction<Tabs>>
+  selectedGame: Games
+  setSelectedGame: React.Dispatch<React.SetStateAction<Games>>
 }
 
-export const initialPomodoro = {
+export const initialPomodoro: PomodoroContext = {
   completedPomodoros: 0,
   setCompletedPomodoros: () => {},
   isCountingPomodoro: false,
@@ -26,8 +30,10 @@ export const initialPomodoro = {
   isCountingLongBreak: false,
   setIsCountingLongBreak: () => {},
   onFinishPomodoro: () => {},
-  selectedTab: 'POMODORO' as Tabs,
-  setSelectedTab: () => {}
+  selectedTab: 'POMODORO',
+  setSelectedTab: () => {},
+  selectedGame: 'GTA_IV',
+  setSelectedGame: () => {}
 }
 
 const PomodoroContext = createContext<PomodoroContext>(initialPomodoro)
