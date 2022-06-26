@@ -1,7 +1,8 @@
 import { useCallback, useContext, useEffect, useState } from 'react'
 
 import {
-  finishBreakNotification,
+  finishBreakNotificationBody,
+  finishBreakNotificationTitle,
   finishBreakSound,
   resetSound,
   startSound,
@@ -12,9 +13,9 @@ import Button from 'components/Button'
 
 import useFormatting from 'hooks/useFormatting'
 import useAudio from 'hooks/useAudio'
+import useNotifications from 'hooks/useNotifications'
 
 import PomodoroContext from 'contexts/pomodoro'
-import NotificationsContext from 'contexts/notifications'
 
 import * as S from './styles'
 
@@ -33,7 +34,7 @@ const PomodoroCounter = () => {
     setSelectedTab
   } = useContext(PomodoroContext)
 
-  const { notify } = useContext(NotificationsContext)
+  const { notify } = useNotifications()
 
   const [showButtons, setShowButtons] = useState<boolean>(false)
 
@@ -50,7 +51,7 @@ const PomodoroCounter = () => {
       setIsCounting: setIsCountingShortBreak,
       finish: () => {
         play(finishBreakSound)
-        notify(finishBreakNotification)
+        notify(finishBreakNotificationTitle, finishBreakNotificationBody)
         setSelectedTab('POMODORO')
       }
     },
@@ -60,7 +61,7 @@ const PomodoroCounter = () => {
       setIsCounting: setIsCountingLongBreak,
       finish: () => {
         play(finishBreakSound)
-        notify(finishBreakNotification)
+        notify(finishBreakNotificationTitle, finishBreakNotificationBody)
         setSelectedTab('POMODORO')
       }
     }

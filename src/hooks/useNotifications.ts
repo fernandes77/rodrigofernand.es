@@ -1,27 +1,40 @@
-import { useEffect, useRef, useState } from 'react'
-
 const useNotifications = () => {
-  const [isPermittedNotify, setIsPermittedNotify] = useState<boolean>(false)
+  const checkNotificationPromise = () => {
+    try {
+      Notification.requestPermission().then()
+    } catch (e) {
+      return false
+    }
 
-  useEffect(() => {
-    setIsPermittedNotify(Notification.permission === 'granted')
-  }, [])
+    return true
+  }
 
-  const getPermissions = () => {
+  const getPermissions = async () => {
     if (!('Notification' in window)) {
       console.log('This browser does not support notifications.')
+      return 'denied'
     } else {
-      Notification.requestPermission().then((permission) => {
-        setIsPermittedNotify(permission === 'granted')
+      if (checkNotificationPromise()) {
+        await Notification.requestPermission().then((permission) => {
+          return permission
+        })
+      } else {
+        await Notification.requestPermission(function (permission) {
+          return permission
+        })
+      }
+    }
+  }
+
+  const notify = (title: string, body?: string) => {
+    if (Notification.permission === 'granted') {
+      new Notification(title, {
+        body
       })
     }
   }
 
-  const notify = (message: string) => {
-    return new Notification(message)
-  }
-
-  return { isPermittedNotify, setIsPermittedNotify, getPermissions, notify }
+  return { getPermissions, notify }
 }
 
 export default useNotifications

@@ -1,24 +1,26 @@
-import { useCallback, useContext, useState } from 'react'
+import { useCallback, useState } from 'react'
 
 import {
-  finishNotification,
+  finishNotificationBody,
+  finishNotificationTitle,
   finishSounds,
-  specialFinishNotification,
+  specialFinishNotificationBody,
+  specialFinishNotificationTitle,
   specialFinishSounds
 } from 'config/pomodoro/gtaIV'
 
 import { Games, Tabs } from 'contexts/pomodoro'
-import NotificationsContext from 'contexts/notifications'
 
 import useAudio from 'hooks/useAudio'
 import useUtils from 'hooks/useUtils'
+import useNotifications from 'hooks/useNotifications'
 
 const usePomodoro = () => {
   const { play } = useAudio()
 
   const { pickRandomArrayElement } = useUtils()
 
-  const { notify } = useContext(NotificationsContext)
+  const { notify } = useNotifications()
 
   const [completedPomodoros, setCompletedPomodoros] = useState<number>(0)
 
@@ -37,13 +39,13 @@ const usePomodoro = () => {
     if (completedPomodoros !== 0 && (completedPomodoros + 1) % 4 === 0) {
       play(pickRandomArrayElement(specialFinishSounds))
 
-      notify(specialFinishNotification)
+      notify(specialFinishNotificationTitle, specialFinishNotificationBody)
 
       setSelectedTab('LONG_BREAK')
     } else {
       play(pickRandomArrayElement(finishSounds))
 
-      notify(finishNotification)
+      notify(finishNotificationTitle, finishNotificationBody)
 
       setSelectedTab('SHORT_BREAK')
     }

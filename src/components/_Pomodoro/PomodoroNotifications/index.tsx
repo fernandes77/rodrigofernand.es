@@ -1,29 +1,33 @@
-import { useContext } from 'react'
+import { useEffect, useState } from 'react'
 
-import Switch from 'components/Switch'
-
-import NotificationsContext from 'contexts/notifications'
+import useNotifications from 'hooks/useNotifications'
 
 import * as S from './styles'
 
 const PomodoroNotifications = () => {
-  const { isPermittedNotify, setIsPermittedNotify, getPermissions } =
-    useContext(NotificationsContext)
+  const { getPermissions } = useNotifications()
 
-  const onToggle = (value) => {
+  const [isShown, setIsShown] = useState<boolean>(true)
+
+  useEffect(() => {
     if (Notification.permission === 'granted') {
-      setIsPermittedNotify(value)
+      setIsShown(false)
     } else {
-      getPermissions()
+      setIsShown(true)
+    }
+  }, [])
+
+  const onClick = async () => {
+    await getPermissions()
+
+    if (['granted', 'denied'].includes(Notification.permission)) {
+      setIsShown(false)
     }
   }
 
   return (
-    <S.Wrapper>
-      <S.Notifications>Notifications</S.Notifications>
-      <S.TurnOnOff>
-        <Switch value={isPermittedNotify} onToggle={onToggle} />
-      </S.TurnOnOff>
+    <S.Wrapper onClick={() => onClick()}>
+      {isShown && 'Enable Notifications'}
     </S.Wrapper>
   )
 }

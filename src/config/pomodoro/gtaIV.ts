@@ -50,10 +50,13 @@ export const resetSound = resetSoundFile
 
 export const finishBreakSound = finishBreak
 
-export const finishNotification = 'Good job. Enjoy your break (and the music).'
+export const finishNotificationTitle = 'Pomodoro completed'
+export const finishNotificationBody = 'Good job. Enjoy your break.'
 
-export const specialFinishNotification =
+export const specialFinishNotificationTitle = 'Pomodoro completed'
+export const specialFinishNotificationBody =
   "You've done 4 Pomodoros in a row. Enjoy the prolonged break."
 
-export const finishBreakNotification =
+export const finishBreakNotificationTitle = 'Time to focus'
+export const finishBreakNotificationBody =
   "Cousin! Don't do anything stupid! Let's have another Pomodoro session."
