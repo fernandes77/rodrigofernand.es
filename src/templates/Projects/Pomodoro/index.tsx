@@ -7,29 +7,34 @@ import TomatoList from 'components/_Pomodoro/TomatoList'
 import PomodoroContext from 'contexts/pomodoro'
 
 import usePomodoro from 'hooks/usePomodoro'
+import useNotifications from 'hooks/useNotifications'
 
 import * as S from './styles'
 
-const Pomodoro = () => (
-  <PomodoroContext.Provider value={usePomodoro()}>
-    <Container>
-      <S.Wrapper>
-        <S.NotificationsWrapper>
-          <PomodoroNotifications />
-        </S.NotificationsWrapper>
+const Pomodoro = () => {
+  const { checkIOS } = useNotifications()
 
-        <S.GameWrapper>
-          <SelectedGame />
-        </S.GameWrapper>
+  return (
+    <PomodoroContext.Provider value={usePomodoro()}>
+      <Container>
+        <S.Wrapper>
+          <S.NotificationsWrapper>
+            {!checkIOS() && <PomodoroNotifications />}
+          </S.NotificationsWrapper>
 
-        <S.PomodoroCounterWrapper>
-          <PomodoroBox />
-        </S.PomodoroCounterWrapper>
+          <S.GameWrapper>
+            <SelectedGame />
+          </S.GameWrapper>
 
-        <TomatoList />
-      </S.Wrapper>
-    </Container>
-  </PomodoroContext.Provider>
-)
+          <S.PomodoroCounterWrapper>
+            <PomodoroBox />
+          </S.PomodoroCounterWrapper>
+
+          <TomatoList />
+        </S.Wrapper>
+      </Container>
+    </PomodoroContext.Provider>
+  )
+}
 
 export default Pomodoro

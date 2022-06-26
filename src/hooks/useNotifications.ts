@@ -1,11 +1,20 @@
 const useNotifications = () => {
-  const checkNotification = () => {
-    return 'Notification' in window
+  const checkIOS = () => {
+    return (
+      [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+      ].includes(navigator.platform) ||
+      (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
+    )
   }
 
   const checkNotificationPromise = () => {
-    if (!checkNotification()) return false
-
+    if (checkIOS()) return false
     try {
       Notification.requestPermission().then()
     } catch (e) {
@@ -16,7 +25,8 @@ const useNotifications = () => {
   }
 
   const getPermissions = async () => {
-    if (!checkNotification()) {
+    if (checkIOS()) return 'denied'
+    if (!('Notification' in window)) {
       console.log('This browser does not support notifications.')
       return 'denied'
     } else {
@@ -33,16 +43,14 @@ const useNotifications = () => {
   }
 
   const notify = (title: string, body?: string) => {
-    if (checkNotification()) {
-      if (Notification.permission === 'granted') {
-        new Notification(title, {
-          body
-        })
-      }
+    if (!checkIOS()) {
+      new Notification(title, {
+        body
+      })
     }
   }
 
-  return { getPermissions, notify }
+  return { checkIOS, getPermissions, notify }
 }
 
 export default useNotifications
