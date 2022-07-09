@@ -5,7 +5,7 @@ import slug from 'remark-slug'
 
 export default async function markdownToHtml(markdown) {
   const result = await remark()
-    .use(html)
+    .use(html, { sanitize: true })
     .use(slug)
     .use(headings, {
       behavior: 'wrap',

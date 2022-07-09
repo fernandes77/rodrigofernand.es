@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 import { BLOG_URL } from './constants'
 
-import globby from 'globby'
-import { SitemapStream, streamToPromise } from 'sitemap'
-import { Readable } from 'stream'
-import fs from 'fs'
+const globby = require('globby')
+const { SitemapStream, streamToPromise } = require('sitemap')
+const { Readable } = require('stream')
+const fs = require('fs')
 
 // pages that should not be in the sitemap
 const blocklist = ['/404']
