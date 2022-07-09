@@ -31,5 +31,14 @@ module.exports = withPWA({
     })
 
     return config
+  },
+  async redirects() {
+    return [
+      {
+        source: '/blog',
+        destination: '/',
+        permanent: true
+      }
+    ]
   }
 })
