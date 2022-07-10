@@ -166,3 +166,5 @@ If the variable arguments are all treated identically, as they are in the exampl
 In the case of a monad, the function and argument should form a very nice verb/noun pair, such as `write(name)`.
 
 In the case of a dyad, we can encode the names of the arguments into the function name. The function `assertEquals` might be better written as `assertExpectedEqualsActual(expected, actual)`. This getting the arguments order wrong.
+
+## Have no side effects
