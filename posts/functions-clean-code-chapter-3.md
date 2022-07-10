@@ -160,3 +160,9 @@ String.format("%s worked %.2f hours.", name, hours);
 If the variable arguments are all treated identically, as they are in the example above, then they are equivalent to a single argument of type `List`. By that reasoning, `String.format` is actually dyadic. Indeed, the declaration of `String.format` as shown below is clearly dyadic:
 
 `public String format(String format, Object... args)`
+
+### Verbs and keywords
+
+In the case of a monad, the function and argument should form a very nice verb/noun pair, such as `write(name)`.
+
+In the case of a dyad, we can encode the names of the arguments into the function name. The function `assertEquals` might be better written as `assertExpectedEqualsActual(expected, actual)`. This getting the arguments order wrong.
