@@ -168,3 +168,89 @@ In the case of a monad, the function and argument should form a very nice verb/n
 In the case of a dyad, we can encode the names of the arguments into the function name. The function `assertEquals` might be better written as `assertExpectedEqualsActual(expected, actual)`. This getting the arguments order wrong.
 
 ## Have no side effects
+
+Side effects are things your function does which are not defined in its name. Try to find the side effect in the following function `checkPassword`:
+
+```java
+public boolean checkPassword(String userName, String password) {
+  User user = UserGateway.findByName(userName);
+  if (user != User.NULL) {
+    String codedPhrase = user.getPhraseEncodedByPassword();
+    String phrase = cryptographer.decrypt(codedPhrase, password);
+    if ("Valid Password".equals(phrase)) {
+      Session.initialize();
+      return true;
+    }
+  }
+  return false;
+}
+```
+
+The side effect is `Session.initialize();`. The name of the function is misleading, as it does not match exactly what the function does. Thus, a password check can only be made when it is safe to initialize the session.
+
+## Command query separation
+
+Functions should either do something or answer something, but not both. Consider the example:
+
+`public boolean set(String attribute, String value);`
+
+This function sets the value of an attribute and returns whether or not the operation was successful. The problem with this function is it creates statements like:
+
+`if (set("username", "unclebob"))...`
+
+This is confusing when you read it for the first time. The solution is to split the queries into different functions.
+
+## Prefer exceptions to returning error codes
+
+Error codes create deeply nested structures, as you have to deal with the error code immediately. Instead, use exceptions:
+
+```java
+try {
+  deletePage(page);
+  registry.deleteReference(page.name);
+  configKeys.deleteKey(page.name.makeKey());
+}
+catch (Exception e) {
+  logger.log(e.getMessage());
+}
+```
+
+### Extract try-catch blocks
+
+Try-catch blocks are already ugly. So try to make them more readable by extracting their blocks:
+
+```java
+public void delete(Page page) {
+  try {
+    deletePageAndAllReferences(page);
+  }
+  catch (Exception e) {
+    logError(e);
+  }
+}
+```
+
+## Don't repeat yourself
+
+Bob says that duplication may be the root of all evil in software. Many principles and practices have been created for the purpose of eliminating it. Consider how object-oriented programming serves to concentrate code into base classes that would otherwise be redundant. Structured programming, Aspect Oriented Programming, Component Oriented Programming, are all, in part, strategies for eliminating duplication.
+
+## How do you write functions like this?
+
+Writing software is like any other kind of writing. When you write a paper or an article, you get your thoughts down first, then you massage it until it reads well. The first draft might be clumsy and disorganized, so you wordsmith it and restructure it and refine it until it reads the way you want it to read.
+
+When we write functions, it is normal for them to come out long and complicated. They have lots of indenting and nested loops. They have long argument lists. The names are arbitrary, and there is duplicated code.
+
+It is our job to massage and refine that code, splitting out functions, changing names, eliminating duplication. Shrink the methods and reorder them.
+
+In the end, we wind up with functions that follow the rules Bob has laid down in this chapter.
+
+No one could write them that way to start.
+
+## Conclusion
+
+Wow, that was a long chapter! But a lot of good insights came from it.
+
+Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. The art of programming is, and has always been, the art of language design.
+
+This chapter has been about the mechanics of writing functions well. If you follow
+the rules herein, your functions will be short, well named, and nicely organized. But never forget that your real goal is to tell the story of the system, and that the functions you write need to fit cleanly together into a clear and precise language to help you with that telling.
