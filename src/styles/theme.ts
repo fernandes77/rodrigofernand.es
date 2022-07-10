@@ -39,7 +39,11 @@ export default {
     greyDark: '#7F848E',
     greyActive: '#323841',
     inputBg: '#343A45',
-    pomodoro: '#FF5C6F'
+    pomodoro: '#FF5C6F',
+    scrollbar: {
+      default: '#484950',
+      hover: '#525356'
+    }
   },
   spacings: {
     xxsmall: '0.8rem',

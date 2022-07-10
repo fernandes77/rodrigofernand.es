@@ -93,6 +93,27 @@ const GlobalStyles = createGlobalStyle`
     code {
       font-family: ${theme.font.code};
     }
+
+    /* Scroll bar stylings */
+    ::-webkit-scrollbar {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: ${theme.colors.scrollbar.default};
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${theme.colors.scrollbar.hover};
+    }
   `}
 `
 export default GlobalStyles
