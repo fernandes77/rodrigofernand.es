@@ -95,7 +95,7 @@ export const Wrapper = styled.div`
       background-color: ${theme.colors.sidebarBg};
       padding: 1.2rem;
       max-width: 100%;
-      overflow-x: scroll;
+      overflow-x: auto;
     }
 
     & img {
