@@ -71,6 +71,10 @@ export const Refresh = styled.button`
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
+    ${disabled &&
+    css`
+      opacity: 0.7;
+    `}
 
     &:hover {
       opacity: 0.85;

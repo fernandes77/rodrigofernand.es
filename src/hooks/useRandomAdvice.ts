@@ -7,18 +7,20 @@ export const useRandomAdvice = () => {
 
   const [loading, setLoading] = useState<boolean>(false)
 
-  const onShowAdvice = useCallback(async () => {
+  const onShowAdvice = useCallback(() => {
     setLoading(true)
 
-    try {
-      const adviceResponse = await randomAdviceService.get('advice')
+    setTimeout(async () => {
+      try {
+        const adviceResponse = await randomAdviceService.get('advice')
 
-      setAdvice(adviceResponse.data.slip.advice)
-    } catch (err) {
-      console.error(err)
-    } finally {
-      setLoading(false)
-    }
+        setAdvice(adviceResponse.data.slip.advice)
+      } catch (err) {
+        console.error(err)
+      } finally {
+        setLoading(false)
+      }
+    }, 1000)
   }, [])
 
   useEffect(() => {
