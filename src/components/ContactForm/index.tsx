@@ -53,7 +53,9 @@ const ContactForm = () => {
         maxLength={512}
       />
       <S.SubmitButton>
-        <Button label="Submit" type="submit" loading={state.submitting} />
+        <Button type="submit" loading={state.submitting}>
+          Submit
+        </Button>
       </S.SubmitButton>
     </S.Wrapper>
   )

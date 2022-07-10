@@ -1,17 +1,24 @@
-import { ButtonHTMLAttributes } from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 
 import * as S from './styles'
 
 type ButtonProps = {
-  label: string
   type: 'button' | 'submit' | 'reset'
   loading?: boolean
   onClick?: React.MouseEventHandler<HTMLButtonElement>
+  children?: React.ReactNode
+  disabled?: boolean
 }
 
-const Button = ({ label, type, loading = false, onClick }: ButtonProps) => (
-  <S.Wrapper type={type} onClick={onClick}>
-    {label}
+const Button = ({
+  type,
+  loading = false,
+  onClick,
+  disabled = false,
+  children
+}: ButtonProps) => (
+  <S.Wrapper type={type} onClick={onClick} disabled={disabled || loading}>
+    {children}
   </S.Wrapper>
 )
 

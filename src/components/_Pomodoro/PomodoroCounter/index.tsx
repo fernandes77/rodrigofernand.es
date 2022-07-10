@@ -134,17 +134,19 @@ const PomodoroCounter = () => {
 
       <S.ButtonsWrapper center={!showButtons}>
         {showButtons && (
-          <Button label="Reset" type="button" onClick={() => handleReset()} />
+          <Button type="button" onClick={() => handleReset()}>
+            Reset
+          </Button>
         )}
 
-        <Button
-          label={isCounting ? 'Stop' : 'Start'}
-          type="button"
-          onClick={() => handleStartStop()}
-        />
+        <Button type="button" onClick={() => handleStartStop()}>
+          {isCounting ? 'Stop' : 'Start'}
+        </Button>
 
         {showButtons && (
-          <Button label="Finish" type="button" onClick={() => onFinish()} />
+          <Button type="button" onClick={() => onFinish()}>
+            Finish
+          </Button>
         )}
       </S.ButtonsWrapper>
     </S.Wrapper>

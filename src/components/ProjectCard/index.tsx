@@ -10,7 +10,7 @@ type ProjectCardProps = {
 }
 
 const ProjectCard = ({ slug, icon, name, description }: ProjectCardProps) => (
-  <Card slug={`projects/${slug}`}>
+  <Card slug={`projects${slug}`}>
     <S.Wrapper>
       <S.IconWrapper>{icon}</S.IconWrapper>
       <S.Name>{name}</S.Name>

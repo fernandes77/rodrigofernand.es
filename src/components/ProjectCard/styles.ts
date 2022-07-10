@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
 
 export const IconWrapper = styled.div`
   width: 7.2rem;
+  height: 7.2rem;
   margin: 0 auto;
 `
 

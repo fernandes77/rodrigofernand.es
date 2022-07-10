@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo'
 
-import Projects from 'templates/Projects'
+import Projects from 'templates/_Projects/Projects'
 
 export default function contact() {
   return (
