@@ -25,7 +25,7 @@ Your functions should really only be a few lines long. The way to achieve this i
      includeTeardownPages(testPage, newPageContent, isSuite);
      pageData.setContent(newPageContent.toString());
    }
-   
+
    return pageData.getHtml();
  }
 ```
@@ -141,7 +141,7 @@ We will have to write dyadic functions eventually. However, they should be avoid
 
 ### Triads
 
-Think very carefully before creating a triad. They have the same problems as the dyads but doubled. 
+Think very carefully before creating a triad. They have the same problems as the dyads but doubled.
 
 ### Argument objects
 

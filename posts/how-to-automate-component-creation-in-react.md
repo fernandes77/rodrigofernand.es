@@ -21,13 +21,13 @@ In this article, I will show you how to generate a new component with a simple c
 
 Add `plop` to your project with:
 
-```
+```bash
 $ npm install --save-dev plop
 ```
 
 or, if you're using yarn:
 
-```
+```bash
 $ yarn add -D plop
 ```
 
@@ -128,7 +128,7 @@ Finally, we'll create the script that will do all this work for us. In your `pac
 
 Now, all you have to do to create a new component, for example a `Button`, is go to your terminal run the command:
 
-```
+```bash
 $ npm run generate Button
 
 or
