@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2022-07-10 11:28:26
-image: /img/shahadat-rahman-gnya8vd3otc-unsplash-1-.jpg
+image: /img/black-and-red-simple-tips-how-to-be-a-programmer-youtube-thumbnail-2-.png
 title: Functions - Clean Code, Chapter 3
 description: Functions are the first line of organization in any program. This
   chapter focuses on how to write them well.
