@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2022-03-06 10:59:21
-image: /img/jon-tyson-566cgcrsnck-unsplash-1-.jpg
+image: /img/black-and-red-simple-tips-how-to-be-a-programmer-youtube-thumbnail-1-.png
 title: How to name variables, functions, etc - Clean Code, Chapter 2
 description: This chapter contains ideas on how to communicate your code's
   intentions through names
