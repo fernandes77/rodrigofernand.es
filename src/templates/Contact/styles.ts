@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 2rem;
+  max-width: 106rem;
 
   @media (max-width: 768px) {
     height: auto;
@@ -13,8 +17,6 @@ export const Wrapper = styled.div`
 
 export const Contact = styled.div`
   ${({ theme }) => css`
-    padding-left: 10rem;
-    padding-right: 8rem;
     max-width: 96rem;
 
     & > h1 {
