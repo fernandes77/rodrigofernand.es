@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2022-02-05 01:41:08
-image: /img/rohit-sqakdb_py_q-unsplash.jpg
+image: /img/black-and-red-simple-tips-how-to-be-a-programmer-youtube-thumbnail.png
 title: What is Clean Code and why use it? - Clean Code, Chapter 1
 description: This chapter creates the concept of Clean Code and defines the
   reasons for it's existence
