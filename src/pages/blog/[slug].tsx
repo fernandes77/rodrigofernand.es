@@ -6,6 +6,7 @@ import { getPostBySlug, getAllPosts } from 'utils/getPosts'
 import markdownToHtml from 'utils/markdownToHtml'
 
 export default function post(post) {
+  console.log(post.frontmatter.image)
   return (
     <>
       <NextSeo

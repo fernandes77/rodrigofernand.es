@@ -19,7 +19,13 @@ export default function blog({ posts }) {
           url: 'https://rodrigofernand.es/blog',
           title: 'Blog | Rodrigo Fernandes',
           description:
-            'A blog made by a brazilian web developer who likes React.'
+            'A blog made by a brazilian web developer who likes React.',
+          images: [
+            {
+              url: '/img/thumbnail.png',
+              alt: 'Rodrigo Fernandes personal logo'
+            }
+          ]
         }}
       />
       <Blog posts={posts} />

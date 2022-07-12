@@ -31,7 +31,7 @@ const SocialIcon = ({ platform }: SocialIconProps) => {
     case 'LinkedIn':
       return (
         <S.Wrapper
-          href="https://www.linkedin.com/in/rodrigo-fernandes-158aa5219/"
+          href="https://www.linkedin.com/in/rodrigo-fernandes-158aa5219/?locale=en_US"
           target="_blank"
           rel="noopener noreferrer"
         >

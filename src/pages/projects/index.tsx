@@ -12,7 +12,13 @@ export default function contact() {
           url: 'https://rodrigofernand.es/',
           title: 'Projects | Rodrigo Fernandes',
           description:
-            'Checkout some of the projects that I made for this website.'
+            'Checkout some of the projects that I made for this website.',
+          images: [
+            {
+              url: '/img/thumbnail.png',
+              alt: 'Rodrigo Fernandes personal logo'
+            }
+          ]
         }}
       />
       <Projects />
