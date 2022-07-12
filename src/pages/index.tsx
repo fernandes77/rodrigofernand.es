@@ -22,7 +22,7 @@ export default function blog({ posts }) {
             'A blog made by a brazilian web developer who likes React.',
           images: [
             {
-              url: '/img/thumbnail.png',
+              url: 'https://rodrigofernand.es/img/thumbnail.png',
               alt: 'Rodrigo Fernandes personal logo'
             }
           ]

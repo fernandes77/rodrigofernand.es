@@ -15,7 +15,7 @@ export default function contact() {
             'Increase your productivity with the Pomodoro technique.',
           images: [
             {
-              url: '/img/thumbnail.png',
+              url: 'https://rodrigofernand.es/img/thumbnail.png',
               alt: 'Rodrigo Fernandes personal logo'
             }
           ]

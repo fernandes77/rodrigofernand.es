@@ -14,7 +14,7 @@ export default function randomAdvice() {
           description: 'Be inspired by a random quote.',
           images: [
             {
-              url: '/img/thumbnail.png',
+              url: 'https://rodrigofernand.es/img/thumbnail.png',
               alt: 'Rodrigo Fernandes personal logo'
             }
           ]
