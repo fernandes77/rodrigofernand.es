@@ -15,7 +15,7 @@ export default function contact() {
             'Checkout some of the projects that I made for this website.',
           images: [
             {
-              url: '/img/thumbnail.png',
+              url: 'https://rodrigofernand.es/img/thumbnail.png',
               alt: 'Rodrigo Fernandes personal logo'
             }
           ]
