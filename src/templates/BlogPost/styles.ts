@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     margin-left: auto;
     max-width: 92rem;
     letter-spacing: 0.07rem;
+    word-wrap: break-word;
 
     @media (max-width: 1024px) {
       padding: 6rem 2rem 4rem;
